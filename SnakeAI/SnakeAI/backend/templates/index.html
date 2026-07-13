@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Arduino Snake</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🐍 Arduino Snake</h1>
+
+        <div class="score-board">
+
+            <div id="score">
+                Score : 0
+            </div>
+
+            <div id="highScore">
+                High Score : 0
+            </div>
+
+        </div>
+
+        <canvas id="game" width="800" height="450"></canvas>
+
+        <div id="gameOver">
+
+            <h2>💀 Game Over</h2>
+
+            <h3 id="finalScore"></h3>
+
+            <button onclick="location.reload()">
+
+                Play Again
+
+            </button>
+
+        </div>
+
+    </div>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+<script src="{{ url_for('static', filename='game.js') }}"></script>
+
+</body>
+
+</html>
